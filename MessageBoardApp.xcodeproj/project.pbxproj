@@ -86,8 +86,8 @@
 			children = (
 				5DC6704624B3CF5D009D6B4B /* Networking */,
 				5DC6704524B3CF30009D6B4B /* Controllers */,
-				5DC6704424B3A407009D6B4B /* views\ */,
-				5D374D3224B381EC002CAC2F /* models */,
+				5DC6704424B3A407009D6B4B /* Views */,
+				5D374D3224B381EC002CAC2F /* Models */,
 				5D374D0024B33CC1002CAC2F /* AppDelegate.swift */,
 				5D374D0224B33CC1002CAC2F /* SceneDelegate.swift */,
 				5D374D0624B33CC1002CAC2F /* Main.storyboard */,
@@ -98,17 +98,17 @@
 			path = MessageBoardApp;
 			sourceTree = "<group>";
 		};
-		5D374D3224B381EC002CAC2F /* models */ = {
+		5D374D3224B381EC002CAC2F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				5D374D1C24B33FE2002CAC2F /* Users.swift */,
 				5D374D1E24B34628002CAC2F /* Posts.swift */,
 				5D374D2224B3490E002CAC2F /* Comments.swift */,
 			);
-			path = models;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		5DC6704424B3A407009D6B4B /* views\ */ = {
+		5DC6704424B3A407009D6B4B /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				5D374D1824B33EA5002CAC2F /* UsersTableViewCell.swift */,
@@ -119,7 +119,7 @@
 				5D374D2F24B38055002CAC2F /* PostTableViewCell.xib */,
 				5DB2C2FE24B4393B00EFD3DD /* ProfileViewHeader.swift */,
 			);
-			path = "views\\";
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5DC6704524B3CF30009D6B4B /* Controllers */ = {
