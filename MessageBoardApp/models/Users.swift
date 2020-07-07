@@ -9,28 +9,18 @@
 import Foundation
 
 
-protocol DetailFormatter {
-    var id :Int { get }
-    var name:String { get }
-    var username: String { get }
-    var email: String { get }
-    var address:Address { get }
-    var company:Company { get }
-}
 
 extension User {
     
     func getFormattedDetails() -> [(String,String)] {
-        return [("Name- ","\(self.name)") ,
-            ("Username- ","\(self.username)"),
-            ("email- ", self.email),
-            ("Address- ","\(self.address.getFullAdress()) "),
-        ("Company- ",self.company.name)]
+        return [("Name ","\(self.name)") ,
+            ("Username","\(self.username)"),
+            ("Email ", self.email),
+            ("Address ","\(self.address.getFullAdress()) "),
+            ("Company ",self.company.name)]
     }
 }
-struct Result :Codable{
-    let results : [User]
-}
+
 struct User: Codable {
     let id:Int
     let name:String
@@ -46,7 +36,6 @@ struct User: Codable {
     
 }
 
-
 struct Address: Codable {
     let street:String
     let suite:String
@@ -55,7 +44,7 @@ struct Address: Codable {
     let geo:GeographicalCoords
     
     func getFullAdress() -> String {
-        "\(street) /n \(city) \(zipcode)"
+        "\(street) \(suite) \(city) \(zipcode)"
     }
     
 }
