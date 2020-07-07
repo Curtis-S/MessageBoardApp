@@ -115,24 +115,24 @@ class ProfileTableViewController: UITableViewController {
         }
     }
     func fetchPostsAndComments(){
-           jDownloader.getModelGen(for: .Posts) { (users:[Post]?,error:Error?) in
-                      guard let users = users else {
+           jDownloader.getModelGen(for: .Posts) { (posts:[Post]?,error:Error?) in
+                      guard let posts = posts else {
                           print("no data got")
                           return
                       }
-            self.posts = self.filterPosts(posts: users)
+            self.posts = self.filterPosts(posts: posts)
                       DispatchQueue.main.async {
                           self.reloadData()
                       }
                   }
         
-        jDownloader.getModelGen(for: .Comments) { (users:[Comment]?,error:Error?) in
-                  guard let users = users else {
+        jDownloader.getModelGen(for: .Comments) { (comments:[Comment]?,error:Error?) in
+                  guard let comments = comments else {
                       print("no data got")
                       return
                   }
-            print("\(users.count)")
-             self.comments = users
+            print("\(comments.count)")
+             self.comments = comments
                  // print(users)
                   DispatchQueue.main.async {
                       self.reloadData()

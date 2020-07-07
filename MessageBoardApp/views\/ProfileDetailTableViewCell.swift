@@ -18,6 +18,7 @@ class ProfileDetailTableViewCell: UITableViewCell {
 
     func configure(withTitle: String ,andText:String) {
         self.textLabel?.text = withTitle
+        self.textLabel?.textColor = UIColor.blue
         self.detailTextLabel?.text = andText
     }
     

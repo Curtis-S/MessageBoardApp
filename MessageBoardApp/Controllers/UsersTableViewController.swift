@@ -11,9 +11,7 @@ import UIKit
 class UsersTableViewController: UITableViewController {
     let jDownloader = UserJsonDownloader()
     var users: [User] = []
-    static var posts: [User] = []
-    static var comments: [User] = []
-   // let photoDl = PhotoDownloader()
+ 
     let cellIdentifier = "test"
     override func viewDidLoad() {
         super.viewDidLoad()
